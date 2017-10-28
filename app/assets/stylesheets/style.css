@@ -1,0 +1,298 @@
+@font-face {
+   font-family: 'CircularStd-Book';
+   src: url(/assets/CircularStd-Book.otf);
+}
+@font-face {
+   font-family: 'CircularStd-Medium';
+   src: url(/assets/CircularStd-Medium.otf);
+}
+@font-face {
+   font-family: 'OpenSans-Regular';
+   src: url(/assets/OpenSans-Regular.ttf);
+}
+
+body{
+	margin:0;
+	padding:0;
+	font-family: 'OpenSans-Regular';	
+  padding-top: 70px;
+}
+
+/*********** Header ******/
+
+.logo{
+  height: 35px;
+  margin-top: 10px;
+}
+.mynav{
+  background: #fff !important;
+  border-radius: 0;
+  margin-bottom: 0;
+  border: 0;
+  padding-top: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+.mynav .container-fluid{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+ 
+
+.mynav .navbar-right li a span i{
+  font-size: 30px;
+  color: #B2B2B2 !important;
+}
+
+.mynav .navbar-right li a span i:hover{
+  color: #D94223 !important;
+  transition:transform 1s;
+}
+
+.section-one{
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+.section-one .container-fluid{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.section-one .thumbnail{
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 30px;
+
+}
+.section-one .thumbnail h3{
+  margin-top: 5px;
+  color: #04355E;
+  font-size: 20px;
+    line-height: 25px;
+}
+.section-one .thumbnail h3 a{
+    color: #04355E !important;
+}
+.section-one .thumbnail .caption{
+  padding: 0;
+}
+.section-one .thumbnail .caption p{
+  color: #292b2c !important;
+  font-size: 15px;
+  line-height: 24px;
+}
+.section-one .thumbnail .caption .text-muted{
+  font-size: 17px;
+}
+.section-one .thumbnail .caption .text-muted span{
+  font-size: 16px;
+}
+
+.section-one .thumbnail img{
+  height: 200px;
+  width: 100%;
+}
+
+
+/************ Extras ***********/
+.circularReg{
+    font-family: 'CircularStd-Book';
+}
+.circularMed{
+     font-family: 'CircularStd-Medium';
+}
+
+.ml5{
+  margin-left: 5px !important;
+}
+.ml7{
+  margin-left: 7px !important;
+}
+.ml10{
+  margin-left: 10px;
+}
+.ml15{
+  margin-left: 15px;
+}
+.ml20{
+  margin-left: 20px;
+}
+.ml30{
+  margin-left: 30px;
+}
+.ml40{
+  margin-left: 40px;
+}
+.ml50{
+  margin-left: 50px;
+}
+.ml100{
+  margin-left: 100px;
+}
+
+.mb5{
+  margin-bottom: 5px;
+}
+.mb10{
+  margin-bottom: 10px;
+}
+.mb15{
+  margin-bottom: 15px;
+}
+.mb20{
+  margin-bottom: 20px;
+}
+.mb30{
+  margin-bottom: 30px;
+}
+.mb40{
+  margin-bottom: 40px;
+}
+.mb100{
+  margin-bottom: 100px;
+}
+.mb150{
+  margin-bottom: 150px;
+}
+
+
+.mt5{
+  margin-top: 5px;
+}
+.mt10{
+  margin-top: 10px;
+}
+.mt15{
+  margin-top: 15px;
+}
+.mt20{
+  margin-top: 20px;
+}
+.mt30{
+  margin-top: 30px;
+}
+.mt40{
+  margin-top: 40px;
+}
+.mt50{
+  margin-top: 50px;
+}
+.mt60{
+  margin-top: 60px;
+}
+.mt70{
+  margin-top: 70px;
+}
+.mt80{
+  margin-top: 80px;
+}
+.mt100{
+  margin-top: 100px;
+}
+
+
+.mt-10{
+  margin-top: -10px;
+}
+.mt-20{
+  margin-top: -20px;
+}
+.mt-30{
+  margin-top: -30px;
+}
+.mt-40{
+  margin-top: -40px;
+}
+.mt-50{
+  margin-top: -50px;
+}
+
+/********* font-size **********/
+.fbold{
+  font-weight: 600;
+}
+.f12{
+  font-size: 12px;
+}
+.f13{
+  font-size: 13px;
+}
+.f14{
+  font-size: 14px !important;
+}
+.f15{
+  font-size: 15px;
+}
+
+.f16{
+  font-size: 16px;
+}
+.f17{
+  font-size: 17px;
+}
+.f18{
+  font-size: 18px;
+}
+.f19{
+  font-size: 19px;
+}
+.f20{
+  font-size: 20px;
+}
+
+.white{
+  color: #fff;
+}
+.whiteMontbold{
+  color: #fff;
+  font-weight: bold;
+}
+.description{
+  min-height: 150px;
+}
+.title{
+  min-height: 80px;
+}
+.pagination a, .pagination span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.pagination>a:focus, .pagination>a:hover, .pagination>span:focus, .pagination>span:hover {
+    z-index: 2;
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd;
+}
+.current{
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+.section-one .thumbnail{
+  height: 460px;
+}
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+.section-one .thumbnail h3{
+      font-size: 17px;
+    line-height: 23px;
+}
+.section-one .thumbnail .caption p{
+      font-size: 14px;
+    line-height: 22px;
+}
+
+
+}
+
+
