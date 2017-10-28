@@ -10,7 +10,7 @@ task :potdrive_scraper => :environment do
     
       data = JSON.parse response.body
       data["values"].each do |item|
-        byebug
+      
         uri = item["uri"]
         title = item["title"]
         description = item["summary"]
