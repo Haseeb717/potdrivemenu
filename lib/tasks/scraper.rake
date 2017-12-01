@@ -16,10 +16,15 @@ task :potdrive_scraper => :environment do
         uri = item["uri"]
         title = item["title"]
         description = item["summary"]
-        image = Cloudinary::Uploader.upload(item["imageUri"],auth)
+        begin
+          image = Cloudinary::Uploader.upload(item["imageUri"],auth)
+        rescue Exception => e
+          image = item["imageUri"]
+        end
+        
         image_url = image["url"]
         date = item["dateTime"]
-        
+
         article = Article.find_or_create_by(:title=>title,:summary=>description,:image_url=>image_url,:link=>uri,:creation_time=>date,:category_id=>category)
       end
     end
