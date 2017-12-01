@@ -1,0 +1,9 @@
+development:
+  cloud_name: "ticketsage"
+  api_key: "644664617676729"
+  api_secret: "62Vk66zNM1UouZVEzUfZZmsrcMc"
+
+production:
+	cloud_name: "ticketsage"
+  api_key: "644664617676729"
+  api_secret: "62Vk66zNM1UouZVEzUfZZmsrcMc"

@@ -29,6 +29,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #gem for scrapper
 gem 'httparty'
 
+gem 'cloudinary'
+
 #gem for pagination
 gem 'will_paginate', '~> 3.1.0'
 
