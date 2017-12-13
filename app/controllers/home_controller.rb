@@ -9,7 +9,13 @@ class HomeController < ApplicationController
   end
 
   def api_data
-  	@articles = Article.order('created_at').paginate(:page => params[:page], :per_page => 18)
+    category = params["category_id"]
+    if category.present?
+  	  @articles = Article.where(:category_id=>category).order('created_at').paginate(:page => params[:page], :per_page => 18)
+    else
+      @articles = Article.order('created_at').paginate(:page => params[:page], :per_page => 18)
+    end
+
   	respond_to do |format|
 		  format.xml  { render :xml => @articles }
 		  format.json { render :json => @articles }
