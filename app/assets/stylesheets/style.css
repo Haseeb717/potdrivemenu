@@ -1,20 +1,20 @@
 @font-face {
    font-family: 'CircularStd-Book';
-   src: url(/assets/CircularStd-Book.otf);
+   src: url(/assets/Rubik-Bold.ttf);
 }
 @font-face {
    font-family: 'CircularStd-Medium';
-   src: url(/assets/CircularStd-Medium.otf);
+   src: url(/assets/Rubik-Medium.ttf);
 }
 @font-face {
-   font-family: 'OpenSans-Regular';
-   src: url(/assets/OpenSans-Regular.ttf);
+   font-family: 'Rubik-Regular';
+   src: url(/assets/Rubik-Regular.ttf);
 }
 
 body{
 	margin:0;
 	padding:0;
-	font-family: 'OpenSans-Regular';	
+	font-family: 'Rubik-Regular';	
   padding-top: 70px;
 }
 

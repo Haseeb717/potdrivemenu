@@ -3,34 +3,27 @@ require 'httparty'
 
 task :potdrive_scraper => :environment do
 
-    categories = Hash.new 
-    categories["234"] = "Industry Top Stories"
-    categories["233"] = "Health"
-    categories["232"] = "Business"
-    categories["231"] = "Politics"
-    categories["230"] = "Culture"
-
-    (230..234).each do |category|
-      @url = "http://news.potdrive.com/concepts/channel/documents?uri=http%3A%2F%2Fwww.ontotext.com%2Fpublishing%#{category}&limit=10000&offset=0"
+      @url = "https://www.themaven.net/api/stream/theweedblog?from=0&size=100&sort=RecentConversation&stories=true&excludeRecentlyViewed=false&viewAnonymous=null"
       response = HTTParty.get(@url)
 
       auth = { cloud_name: "ticketsage",api_key: "644664617676729",api_secret: "62Vk66zNM1UouZVEzUfZZmsrcMc",:folder => "potdrive"}
       
       data = JSON.parse response.body
-      data["values"].each do |item|
-        category_name = categories["#{category}"]
-        uri = item["uri"]
+      data["documents"].each do |item|
+        #category_name = categories["#{category}"]
+        uri = item["url"]
         title = item["title"]
-        description = item["summary"]
-        
-        date = item["dateTime"]
+        description = item["description"]
+        extensions = item["extensions"][0] if item["extensions"].present?
+        image_uri = extensions["story"]["photo"] if extensions.present?
+        date = item["firstMessage"]["dateTime"]
 
-        Article.find_or_create_by(:title=>title,:summary=>description,:category=>category_name,:link=>uri,:creation_time=>date,:category_id=>category) do |article|
+        Article.find_or_create_by(:title=>title,:summary=>description,:link=>uri,:creation_time=>date) do |article|
           
           begin
-            image = Cloudinary::Uploader.upload(item["imageUri"],auth)
+            image = Cloudinary::Uploader.upload(image_uri,auth)
           rescue Exception => e
-            image = item["imageUri"]
+            image = image_uri
           end
         
           image_url = image["url"]
@@ -38,7 +31,6 @@ task :potdrive_scraper => :environment do
         end
 
       end
-    end
     
   
 end
